@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-pink: #F472B6;
+    --pastel-pink: #FFE4EE;
+    --glow-color: rgba(244, 114, 182, 0.35);
+  }
+
+  body {
+    background-color: #FAF9FC;
+    color: #181424;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Custom Smooth Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #FAF9FC;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #FFB3D1;
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #F472B6;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px rgba(244, 114, 182, 0.4);
+  }
+
+  .text-glow-soft {
+    text-shadow: 0 0 12px rgba(255, 179, 209, 0.5);
+  }
+
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(244, 114, 182, 0.18);
+    box-shadow: 0 10px 30px -10px rgba(244, 114, 182, 0.08);
+  }
+
+  .glass-panel-elevated {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(244, 114, 182, 0.25);
+    box-shadow: 0 20px 40px -15px rgba(244, 114, 182, 0.16);
+  }
+
+  .glass-pill {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(244, 114, 182, 0.25);
+  }
+
+  .holographic-border {
+    position: relative;
+  }
+
+  .holographic-border::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(244,114,182,0.6), rgba(255,255,255,0.9), rgba(216,180,254,0.5), rgba(244,114,182,0.3));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .bg-grid-pattern {
+    background-size: 32px 32px;
+    background-image: 
+      linear-gradient(to right, rgba(244, 114, 182, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(244, 114, 182, 0.06) 1px, transparent 1px);
+  }
+
+  .bg-dots-pattern {
+    background-image: radial-gradient(rgba(244, 114, 182, 0.18) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+}
+
+/* Futuristic scanline & aura effects */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.45;
+  transition: all 0.5s ease;
+}
