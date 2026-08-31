@@ -73,9 +73,9 @@ Then open the local URL shown in your terminal.
 
 If you're interested in my work, have an opportunity, or simply want to say hello — feel free to connect!
 
-* 💼 LinkedIn — Add your LinkedIn
-* 🐙 GitHub — Add your GitHub
-* 📧 Email — Add your email
+* 💼 LinkedIn — https://www.linkedin.com/in/afsanakathoon3/
+* 🐙 GitHub — https://github.com/Afsu03
+* 📧 Email — afsanakathoon3@gmail.com
 
 ---
 
