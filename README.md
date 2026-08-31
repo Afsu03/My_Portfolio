@@ -1,6 +1,6 @@
 <div align="center">
 
-  # ✦ Afsana Kathoon A — Interactive 3D Portfolio
+  # ✦ Know who I am. See what I build. Follow where I'm going.
 
   <p align="center">
     <strong>AI Systems Engineer & Full Stack Developer</strong><br>
