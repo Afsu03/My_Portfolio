@@ -8,7 +8,6 @@ export const CustomCursor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Only activate custom cursor on fine pointer devices (desktop)
     if (window.matchMedia('(pointer: coarse)').matches) {
       return;
     }
@@ -43,9 +42,9 @@ export const CustomCursor: React.FC = () => {
 
   return (
     <div className="fixed inset-0 pointer-events-none z-[9999]">
-      {/* Outer Glowing Pink Aura */}
+      {/* Outer Glowing Royal Pink Aura */}
       <motion.div
-        className="fixed top-0 left-0 rounded-full bg-gradient-to-tr from-[#F472B6]/30 to-[#FFD1E3]/20 border border-[#F472B6]/40 blur-[1px] pointer-events-none"
+        className="fixed top-0 left-0 rounded-full bg-gradient-to-tr from-[#BE185D]/30 to-[#DB2777]/20 border border-[#BE185D]/40 blur-[1px] pointer-events-none"
         animate={{
           x: pos.x - (isHovered ? 28 : 16),
           y: pos.y - (isHovered ? 28 : 16),
@@ -62,9 +61,9 @@ export const CustomCursor: React.FC = () => {
         }}
       />
 
-      {/* Core Cursor Dot */}
+      {/* Core Royal Pink Cursor Dot */}
       <motion.div
-        className="fixed top-0 left-0 w-2.5 h-2.5 rounded-full bg-[#F472B6] shadow-[0_0_12px_#F472B6] pointer-events-none"
+        className="fixed top-0 left-0 w-2.5 h-2.5 rounded-full bg-[#BE185D] shadow-[0_0_12px_#BE185D] pointer-events-none"
         animate={{
           x: pos.x - 5,
           y: pos.y - 5,

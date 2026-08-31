@@ -19,11 +19,9 @@ export const HeroGem: React.FC<HeroGemProps> = ({ mousePos }) => {
     const time = state.clock.getElapsedTime();
 
     if (meshRef.current) {
-      // Rotation
       meshRef.current.rotation.x += delta * 0.25;
       meshRef.current.rotation.y += delta * 0.35;
 
-      // Mouse tracking interpolation
       const targetX = mousePos.current.x * 0.4;
       const targetY = -mousePos.current.y * 0.4;
       meshRef.current.rotation.x = THREE.MathUtils.lerp(meshRef.current.rotation.x, targetY + time * 0.15, 0.05);
@@ -40,7 +38,6 @@ export const HeroGem: React.FC<HeroGemProps> = ({ mousePos }) => {
       outerRing2Ref.current.rotation.z += delta * 0.3;
     }
 
-    // Orbiting satellites
     if (satellite1Ref.current) {
       satellite1Ref.current.position.x = Math.cos(time * 0.8) * 2.8;
       satellite1Ref.current.position.z = Math.sin(time * 0.8) * 2.8;
@@ -67,18 +64,18 @@ export const HeroGem: React.FC<HeroGemProps> = ({ mousePos }) => {
   return (
     <Float speed={2} rotationIntensity={0.5} floatIntensity={1.2}>
       <group position={[0, 0, 0]}>
-        {/* Central Iridescent Crystalline Gem */}
+        {/* Central Rich Royal Dark Pink Crystalline Gem */}
         <mesh ref={meshRef} scale={1.45}>
           <icosahedronGeometry args={[1, 1]} />
           <MeshDistortMaterial
-            color="#FFD1E3"
-            emissive="#FF80AB"
-            emissiveIntensity={0.25}
-            roughness={0.12}
-            metalness={0.45}
+            color="#BE185D"
+            emissive="#9D174D"
+            emissiveIntensity={0.45}
+            roughness={0.15}
+            metalness={0.55}
             clearcoat={1}
-            clearcoatRoughness={0.1}
-            distort={0.35}
+            clearcoatRoughness={0.08}
+            distort={0.32}
             speed={1.8}
             wireframe={false}
           />
@@ -88,76 +85,76 @@ export const HeroGem: React.FC<HeroGemProps> = ({ mousePos }) => {
         <mesh scale={1.1}>
           <octahedronGeometry args={[1, 0]} />
           <meshStandardMaterial
-            color="#F472B6"
+            color="#DB2777"
             wireframe={true}
             transparent={true}
-            opacity={0.35}
-            emissive="#F472B6"
-            emissiveIntensity={0.6}
+            opacity={0.45}
+            emissive="#BE185D"
+            emissiveIntensity={0.8}
           />
         </mesh>
 
-        {/* Orbital Ring 1 */}
+        {/* Orbital Ring 1 - Rich Royal Fuchsia / Pink */}
         <group ref={outerRing1Ref}>
           <mesh>
             <torusGeometry args={[2.5, 0.02, 16, 100]} />
             <meshStandardMaterial
-              color="#F472B6"
-              emissive="#FF80AB"
-              emissiveIntensity={0.8}
+              color="#BE185D"
+              emissive="#DB2777"
+              emissiveIntensity={1.0}
               transparent
-              opacity={0.65}
+              opacity={0.75}
               roughness={0.1}
               metalness={0.9}
             />
           </mesh>
         </group>
 
-        {/* Orbital Ring 2 */}
+        {/* Orbital Ring 2 - Deep Velvet Pink */}
         <group ref={outerRing2Ref}>
           <mesh>
             <torusGeometry args={[2.9, 0.015, 16, 100]} />
             <meshStandardMaterial
-              color="#FDA4AF"
-              emissive="#FB7185"
-              emissiveIntensity={0.6}
+              color="#9D174D"
+              emissive="#BE185D"
+              emissiveIntensity={0.8}
               transparent
-              opacity={0.5}
-              roughness={0.2}
-              metalness={0.8}
+              opacity={0.65}
+              roughness={0.15}
+              metalness={0.85}
             />
           </mesh>
         </group>
 
-        {/* Orbiting Satellites / Quantum nodes */}
+        {/* Orbiting Satellites */}
         <mesh ref={satellite1Ref} scale={0.2}>
           <dodecahedronGeometry />
           <meshStandardMaterial
             color="#FFFFFF"
-            emissive="#F472B6"
-            emissiveIntensity={1.2}
+            emissive="#BE185D"
+            emissiveIntensity={1.5}
             roughness={0.1}
-            metalness={0.8}
+            metalness={0.9}
           />
         </mesh>
 
         <mesh ref={satellite2Ref} scale={0.16}>
           <octahedronGeometry />
           <meshStandardMaterial
-            color="#FFB3D1"
-            emissive="#FF4081"
-            emissiveIntensity={1.0}
+            color="#FBCFE8"
+            emissive="#DB2777"
+            emissiveIntensity={1.2}
             roughness={0.2}
-            metalness={0.7}
+            metalness={0.8}
           />
         </mesh>
 
         <mesh ref={satellite3Ref} scale={0.18}>
           <tetrahedronGeometry />
           <meshStandardMaterial
-            color="#E8D5FF"
-            emissive="#A855F7"
-            emissiveIntensity={0.9}
+            color="#FCE7F3"
+            emissive="#9D174D"
+            emissiveIntensity={1.1}
             roughness={0.1}
             metalness={0.9}
           />

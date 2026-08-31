@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Code2, Cpu, Binary, Database, Wrench, Search, Sparkles, Check, CheckCircle2 } from 'lucide-react';
+import { Code2, Cpu, Binary, Database, Wrench, Search, Sparkles, CheckCircle2 } from 'lucide-react';
 import { skillCategories } from '../../data/resumeData';
 import { sounds } from '../../utils/sound';
 import { Card3D } from '../ui/Card3D';
@@ -43,14 +43,14 @@ export const SkillsSection: React.FC = () => {
       <div className="max-w-6xl mx-auto w-full">
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-12">
-          <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-[#FFE4EE] text-[#F472B6] text-xs font-mono font-semibold mb-3 border border-[#F472B6]/25">
+          <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-[#FCE7F3] text-[#BE185D] text-xs font-mono font-semibold mb-3 border border-[#BE185D]/25">
             <Sparkles className="w-3 h-3" />
             <span>02. TECHNICAL MATRIX</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-[#181424] tracking-tight mb-4">
-            Full-Stack & <span className="bg-gradient-to-r from-[#F472B6] to-[#EC4899] bg-clip-text text-transparent">AI Toolchain</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-[#19111E] tracking-tight mb-4">
+            Full-Stack & <span className="bg-gradient-to-r from-[#BE185D] via-[#DB2777] to-[#9D174D] bg-clip-text text-transparent">AI Toolchain</span>
           </h2>
-          <p className="text-sm sm:text-base text-[#6B6580] max-w-2xl font-sans">
+          <p className="text-sm sm:text-base text-[#665C6B] max-w-2xl font-sans">
             Grounded in core Computer Science fundamentals, algorithms, scalable backend architectures, and intelligent agent orchestration.
           </p>
         </div>
@@ -58,7 +58,7 @@ export const SkillsSection: React.FC = () => {
         {/* Filter Tabs & Search Bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-10">
           {/* Categories Tab Pill Bar */}
-          <div className="flex items-center flex-wrap gap-1.5 p-1.5 rounded-full glass-panel bg-white/70 border-[#F472B6]/20">
+          <div className="flex items-center flex-wrap gap-1.5 p-1.5 rounded-full glass-panel bg-white/80 border-[#BE185D]/20">
             <button
               onClick={() => {
                 sounds.playClick();
@@ -67,8 +67,8 @@ export const SkillsSection: React.FC = () => {
               onMouseEnter={() => sounds.playHover()}
               className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all ${
                 activeTab === 'all'
-                  ? 'bg-gradient-to-r from-[#F472B6] to-[#EC4899] text-white shadow-sm font-semibold'
-                  : 'text-[#6B6580] hover:text-[#181424]'
+                  ? 'bg-gradient-to-r from-[#BE185D] via-[#DB2777] to-[#9D174D] text-white shadow-sm font-semibold'
+                  : 'text-[#665C6B] hover:text-[#19111E]'
               }`}
             >
               All Skills
@@ -84,8 +84,8 @@ export const SkillsSection: React.FC = () => {
                 onMouseEnter={() => sounds.playHover()}
                 className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all ${
                   activeTab === cat.id
-                    ? 'bg-gradient-to-r from-[#F472B6] to-[#EC4899] text-white shadow-sm font-semibold'
-                    : 'text-[#6B6580] hover:text-[#181424]'
+                    ? 'bg-gradient-to-r from-[#BE185D] via-[#DB2777] to-[#9D174D] text-white shadow-sm font-semibold'
+                    : 'text-[#665C6B] hover:text-[#19111E]'
                 }`}
               >
                 {cat.title}
@@ -95,13 +95,13 @@ export const SkillsSection: React.FC = () => {
 
           {/* Quick Search */}
           <div className="relative w-full md:w-64">
-            <Search className="w-4 h-4 text-[#F472B6] absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <Search className="w-4 h-4 text-[#BE185D] absolute left-3.5 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search skill (e.g. Java, DBMS)..."
-              className="w-full pl-9 pr-4 py-2 rounded-full glass-panel bg-white/80 border-[#F472B6]/25 text-xs text-[#181424] placeholder-[#6B6580]/70 focus:outline-none focus:border-[#F472B6] transition-all font-mono"
+              className="w-full pl-9 pr-4 py-2 rounded-full glass-panel bg-white/90 border-[#BE185D]/25 text-xs text-[#19111E] placeholder-[#665C6B]/70 focus:outline-none focus:border-[#BE185D] transition-all font-mono"
             />
           </div>
         </div>
@@ -122,24 +122,24 @@ export const SkillsSection: React.FC = () => {
                 >
                   <Card3D
                     intensity={10}
-                    className="p-6 h-full glass-panel-elevated bg-white/85 border-[#F472B6]/25 shadow-glass flex flex-col justify-between"
+                    className="p-6 h-full glass-panel-elevated bg-white/90 border-[#BE185D]/25 shadow-glass flex flex-col justify-between"
                   >
                     <div>
                       <div className="flex items-center space-x-3 mb-3">
-                        <div className="w-10 h-10 rounded-2xl bg-[#FFE4EE] text-[#F472B6] flex items-center justify-center shadow-sm">
+                        <div className="w-10 h-10 rounded-2xl bg-[#FCE7F3] text-[#BE185D] flex items-center justify-center shadow-sm">
                           {getIcon(cat.icon)}
                         </div>
                         <div>
-                          <h3 className="font-display font-bold text-base text-[#181424]">
+                          <h3 className="font-display font-bold text-base text-[#19111E]">
                             {cat.title}
                           </h3>
-                          <div className="text-[11px] font-mono text-[#6B6580]">
+                          <div className="text-[11px] font-mono text-[#665C6B]">
                             {cat.skills.length} competencies
                           </div>
                         </div>
                       </div>
 
-                      <p className="text-xs text-[#6B6580] mb-5 leading-relaxed">
+                      <p className="text-xs text-[#665C6B] mb-5 leading-relaxed">
                         {cat.description}
                       </p>
 
@@ -149,13 +149,13 @@ export const SkillsSection: React.FC = () => {
                           <div
                             key={sIdx}
                             onMouseEnter={() => sounds.playHover()}
-                            className="p-3 rounded-2xl bg-[#FAF9FC] hover:bg-[#FFE4EE]/40 border border-[#F472B6]/15 transition-all group"
+                            className="p-3 rounded-2xl bg-[#FAF8FA] hover:bg-[#FCE7F3]/50 border border-[#BE185D]/15 transition-all group"
                           >
                             <div className="flex items-center justify-between mb-1.5">
-                              <span className="font-semibold text-xs text-[#181424] group-hover:text-[#F472B6] transition-colors">
+                              <span className="font-semibold text-xs text-[#19111E] group-hover:text-[#BE185D] transition-colors">
                                 {skill.name}
                               </span>
-                              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-white text-[#F472B6] border border-[#F472B6]/20 font-bold">
+                              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-white text-[#BE185D] border border-[#BE185D]/25 font-bold">
                                 {skill.level}
                               </span>
                             </div>
@@ -165,7 +165,7 @@ export const SkillsSection: React.FC = () => {
                                 {skill.tags.map((t, tIdx) => (
                                   <span
                                     key={tIdx}
-                                    className="text-[9px] font-mono px-1.5 py-0.5 rounded bg-white/80 text-[#6B6580] border border-[#F472B6]/10"
+                                    className="text-[9px] font-mono px-1.5 py-0.5 rounded bg-white/80 text-[#665C6B] border border-[#BE185D]/10"
                                   >
                                     #{t}
                                   </span>
@@ -177,11 +177,11 @@ export const SkillsSection: React.FC = () => {
                       </div>
                     </div>
 
-                    <div className="mt-5 pt-3 border-t border-[#F472B6]/15 flex items-center justify-between text-[10px] font-mono text-[#6B6580]">
+                    <div className="mt-5 pt-3 border-t border-[#BE185D]/15 flex items-center justify-between text-[10px] font-mono text-[#665C6B]">
                       <span className="flex items-center gap-1 text-emerald-600 font-semibold">
                         <CheckCircle2 className="w-3 h-3" /> Verified in Projects
                       </span>
-                      <span className="text-[#F472B6]">v2025</span>
+                      <span className="text-[#BE185D] font-bold">v2025</span>
                     </div>
                   </Card3D>
                 </motion.div>

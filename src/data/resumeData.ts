@@ -15,7 +15,7 @@ export const personalInfo = {
     { label: "Pipeline Throughput", value: "35.8k+", unit: "rec/sec" },
     { label: "Query Speedup", value: "98.8x", unit: "optimization" },
     { label: "Predictive Accuracy", value: "85%+", unit: "ML models" },
-    { label: "B.E. CSE CGPA", value: "8.14", unit: "Academic" }
+    { label: "B.E. CSE CGPA", value: "8.16", unit: "Academic" }
   ]
 };
 
@@ -24,7 +24,7 @@ export const educationList: EducationItem[] = [
     degree: "Bachelor of Computer Science Engineering",
     institution: "Dr. N.G.P Institute of Technology",
     period: "Expected March 2027",
-    score: "8.14",
+    score: "8.16",
     scoreLabel: "CGPA",
     status: "In Progress",
     highlights: [
@@ -118,7 +118,7 @@ export const projectsList: Project[] = [
     category: "AI / LLM",
     featured: true,
     status: "Featured",
-    accentColor: "#F472B6",
+    accentColor: "#BE185D",
     technologies: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Prisma", "Google Gemini", "JWT", "AES-256-GCM"],
     githubUrl: "https://github.com/Afsu03/AegisAI",
     architectureSummary: "Enterprise-grade SOC platform capable of ingesting multi-format security logs at 35,800+ records/sec via a deterministic rule engine. Powered by a 4-agent Google Gemini pipeline for threat triage, automated incident summarization, and schema-validated risk scoring.",
@@ -142,7 +142,7 @@ export const projectsList: Project[] = [
     category: "Machine Learning",
     featured: true,
     status: "Completed",
-    accentColor: "#EC4899",
+    accentColor: "#9D174D",
     technologies: ["Python", "Scikit-learn", "Flask", "MySQL", "Pandas", "NumPy", "Data Preprocessing"],
     githubUrl: "https://github.com/Afsu03/AlzheimerSystem",
     architectureSummary: "Supervised machine learning classification pipeline trained on multi-dimensional patient health indicators to provide early clinical risk stratification and continuous patient telemetry alerts.",
@@ -165,7 +165,7 @@ export const projectsList: Project[] = [
     category: "IoT / Systems",
     featured: false,
     status: "Completed",
-    accentColor: "#FB7185",
+    accentColor: "#DB2777",
     technologies: ["Python", "MySQL", "Geospatial Logic", "Haversine Distance", "REST APIs"],
     githubUrl: "https://github.com/Afsu03/SmartDestinationAlertSystem",
     architectureSummary: "Real-time passenger navigation and location-tracking system calculating dynamic transit ETAs and notifying passengers via automated triggers prior to station arrival.",
@@ -187,7 +187,7 @@ export const projectsList: Project[] = [
     category: "Machine Learning",
     featured: false,
     status: "Completed",
-    accentColor: "#A855F7",
+    accentColor: "#831843",
     technologies: ["Python", "Scikit-learn", "NLP", "TF-IDF", "Flask", "MySQL"],
     githubUrl: "https://github.com/Afsu03/ReviewShield_Ai",
     architectureSummary: "Natural Language Processing classification engine detecting deceptive opinions, spam, and incentivized fake reviews from massive e-commerce product feedback datasets.",
@@ -209,7 +209,7 @@ export const projectsList: Project[] = [
     category: "Full Stack",
     featured: false,
     status: "Completed",
-    accentColor: "#F43F5E",
+    accentColor: "#BE185D",
     technologies: ["HTML5", "CSS3", "JavaScript", "MySQL", "Responsive Design"],
     githubUrl: "https://github.com/Afsu03/AG_Interiors",
     architectureSummary: "Full-stack commercial catalogue and interior client showcase website with integrated customer enquiry management and relational storage.",

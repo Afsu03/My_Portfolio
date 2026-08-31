@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Github, ExternalLink, Sparkles, CheckCircle2, Cpu, ShieldCheck, Activity } from 'lucide-react';
+import { X, Github, ExternalLink, Sparkles, CheckCircle2, Cpu } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { Project } from '../../types/portfolio';
 import { sounds } from '../../utils/sound';
@@ -15,10 +15,10 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
     if (project) {
       sounds.playChime();
       confetti({
-        particleCount: 40,
-        spread: 60,
+        particleCount: 45,
+        spread: 65,
         origin: { y: 0.7 },
-        colors: ['#F472B6', '#FFB3D1', '#FDA4AF', '#E8D5FF']
+        colors: ['#BE185D', '#DB2777', '#9D174D', '#FBCFE8']
       });
     }
   }, [project]);
@@ -34,7 +34,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="fixed inset-0 bg-[#0F0C1B]/50 backdrop-blur-md"
+          className="fixed inset-0 bg-[#140914]/50 backdrop-blur-md"
         />
 
         {/* Modal Window */}
@@ -43,33 +43,33 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.92, y: 30 }}
           transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="relative w-full max-w-3xl bg-white/95 backdrop-blur-2xl rounded-3xl border border-[#F472B6]/30 shadow-[0_30px_70px_-15px_rgba(244,114,182,0.35)] overflow-hidden z-10 my-8"
+          className="relative w-full max-w-3xl bg-white/95 backdrop-blur-2xl rounded-3xl border border-[#BE185D]/30 shadow-[0_30px_70px_-15px_rgba(190,24,93,0.35)] overflow-hidden z-10 my-8"
         >
-          {/* Header Banner with Pastel Gradient */}
-          <div className="relative p-6 sm:p-8 bg-gradient-to-br from-[#FFF5F8] via-[#FFE4EE]/60 to-white border-b border-[#F472B6]/15">
+          {/* Header Banner with Rich Royal Pink Gradient */}
+          <div className="relative p-6 sm:p-8 bg-gradient-to-br from-[#FDF2F8] via-[#FCE7F3]/70 to-white border-b border-[#BE185D]/15">
             <button
               onClick={() => {
                 sounds.playClick();
                 onClose();
               }}
-              className="absolute top-6 right-6 w-9 h-9 rounded-full bg-white/80 hover:bg-white border border-[#F472B6]/20 flex items-center justify-center text-[#181424] hover:text-[#F472B6] transition-all shadow-sm group"
+              className="absolute top-6 right-6 w-9 h-9 rounded-full bg-white/80 hover:bg-white border border-[#BE185D]/20 flex items-center justify-center text-[#19111E] hover:text-[#BE185D] transition-all shadow-sm group"
             >
               <X className="w-5 h-5 group-hover:rotate-90 transition-transform" />
             </button>
 
             <div className="flex flex-wrap items-center gap-2 mb-3">
-              <span className="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#FFE4EE] text-[#F472B6] border border-[#F472B6]/25">
+              <span className="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#FCE7F3] text-[#BE185D] border border-[#BE185D]/30">
                 {project.category}
               </span>
-              <span className="px-2.5 py-0.5 rounded-full text-[11px] font-mono text-[#6B6580] bg-white border border-[#F472B6]/15">
+              <span className="px-2.5 py-0.5 rounded-full text-[11px] font-mono text-[#665C6B] bg-white border border-[#BE185D]/15">
                 Status: {project.status}
               </span>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl font-display font-bold text-[#181424] mb-2 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-display font-bold text-[#19111E] mb-2 tracking-tight">
               {project.title}
             </h2>
-            <p className="text-sm text-[#6B6580] font-sans max-w-2xl leading-relaxed">
+            <p className="text-sm text-[#665C6B] font-sans max-w-2xl leading-relaxed">
               {project.subtitle}
             </p>
           </div>
@@ -77,34 +77,34 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           {/* Body Content */}
           <div className="p-6 sm:p-8 space-y-6 max-h-[70vh] overflow-y-auto">
             {/* Architecture Overview */}
-            <div className="p-4 sm:p-5 rounded-2xl bg-[#FAF9FC] border border-[#F472B6]/15">
-              <div className="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-[#F472B6] mb-2">
+            <div className="p-4 sm:p-5 rounded-2xl bg-[#FAF8FA] border border-[#BE185D]/15">
+              <div className="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-[#BE185D] mb-2">
                 <Cpu className="w-4 h-4" />
                 <span>Architecture & Engineering Highlights</span>
               </div>
-              <p className="text-sm text-[#181424] leading-relaxed font-sans">
+              <p className="text-sm text-[#19111E] leading-relaxed font-sans">
                 {project.architectureSummary}
               </p>
             </div>
 
             {/* Performance Metrics Grid */}
             <div>
-              <h4 className="text-xs font-mono uppercase tracking-wider text-[#6B6580] font-semibold mb-3">
+              <h4 className="text-xs font-mono uppercase tracking-wider text-[#665C6B] font-semibold mb-3">
                 Key Performance Metrics & Architecture Specs
               </h4>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 {project.metrics.map((metric, i) => (
                   <div
                     key={i}
-                    className="p-3.5 rounded-2xl bg-white border border-[#F472B6]/20 shadow-sm flex flex-col justify-between"
+                    className="p-3.5 rounded-2xl bg-white border border-[#BE185D]/20 shadow-sm flex flex-col justify-between"
                   >
-                    <span className="text-[10px] font-mono text-[#6B6580] uppercase tracking-wider">
+                    <span className="text-[10px] font-mono text-[#665C6B] uppercase tracking-wider">
                       {metric.label}
                     </span>
-                    <span className="text-lg sm:text-xl font-display font-extrabold text-[#F472B6] my-1">
+                    <span className="text-lg sm:text-xl font-display font-extrabold text-[#BE185D] my-1">
                       {metric.value}
                     </span>
-                    <span className="text-[11px] text-[#6B6580] leading-tight">
+                    <span className="text-[11px] text-[#665C6B] leading-tight">
                       {metric.description}
                     </span>
                   </div>
@@ -114,13 +114,13 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
             {/* Technical Bullets */}
             <div>
-              <h4 className="text-xs font-mono uppercase tracking-wider text-[#6B6580] font-semibold mb-3">
+              <h4 className="text-xs font-mono uppercase tracking-wider text-[#665C6B] font-semibold mb-3">
                 Detailed Implementation Points
               </h4>
               <ul className="space-y-2.5">
                 {project.bullets.map((bullet, i) => (
-                  <li key={i} className="flex items-start space-x-3 text-xs sm:text-sm text-[#181424]/85 leading-relaxed">
-                    <CheckCircle2 className="w-4 h-4 text-[#F472B6] shrink-0 mt-0.5" />
+                  <li key={i} className="flex items-start space-x-3 text-xs sm:text-sm text-[#19111E]/85 leading-relaxed">
+                    <CheckCircle2 className="w-4 h-4 text-[#BE185D] shrink-0 mt-0.5" />
                     <span>{bullet}</span>
                   </li>
                 ))}
@@ -129,14 +129,14 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
             {/* Tech Stack Pills */}
             <div>
-              <h4 className="text-xs font-mono uppercase tracking-wider text-[#6B6580] font-semibold mb-3">
+              <h4 className="text-xs font-mono uppercase tracking-wider text-[#665C6B] font-semibold mb-3">
                 Technologies & Frameworks
               </h4>
               <div className="flex flex-wrap gap-2">
                 {project.technologies.map((tech, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 rounded-full text-xs font-mono bg-[#FFE4EE]/60 text-[#181424] border border-[#F472B6]/20 shadow-sm"
+                    className="px-3 py-1 rounded-full text-xs font-mono bg-[#FCE7F3]/70 text-[#19111E] border border-[#BE185D]/20 shadow-sm"
                   >
                     {tech}
                   </span>
@@ -146,8 +146,8 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           </div>
 
           {/* Modal Actions Footer */}
-          <div className="p-6 bg-[#FAF9FC] border-t border-[#F472B6]/15 flex flex-wrap items-center justify-between gap-4">
-            <span className="text-xs font-mono text-[#6B6580]">
+          <div className="p-6 bg-[#FAF8FA] border-t border-[#BE185D]/15 flex flex-wrap items-center justify-between gap-4">
+            <span className="text-xs font-mono text-[#665C6B]">
               Curated from verified resume repositories
             </span>
 
@@ -158,11 +158,11 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 rel="noreferrer"
                 onMouseEnter={() => sounds.playHover()}
                 onClick={() => sounds.playClick()}
-                className="flex items-center space-x-2 px-5 py-2 rounded-full bg-white hover:bg-[#FFE4EE]/60 text-[#181424] border border-[#F472B6]/30 text-xs font-semibold shadow-sm transition-all group"
+                className="flex items-center space-x-2 px-5 py-2 rounded-full bg-white hover:bg-[#FCE7F3]/60 text-[#19111E] border border-[#BE185D]/30 text-xs font-semibold shadow-sm transition-all group"
               >
-                <Github className="w-4 h-4 text-[#F472B6] group-hover:scale-110 transition-transform" />
+                <Github className="w-4 h-4 text-[#BE185D] group-hover:scale-110 transition-transform" />
                 <span>View Source on GitHub</span>
-                <ExternalLink className="w-3 h-3 text-[#6B6580]" />
+                <ExternalLink className="w-3 h-3 text-[#665C6B]" />
               </a>
 
               <button
@@ -170,7 +170,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                   sounds.playClick();
                   onClose();
                 }}
-                className="px-5 py-2 rounded-full bg-gradient-to-r from-[#F472B6] to-[#EC4899] text-white text-xs font-semibold shadow-md hover:shadow-lg transition-all"
+                className="px-5 py-2 rounded-full bg-gradient-to-r from-[#BE185D] via-[#DB2777] to-[#9D174D] text-white text-xs font-semibold shadow-md hover:shadow-lg transition-all"
               >
                 Done
               </button>

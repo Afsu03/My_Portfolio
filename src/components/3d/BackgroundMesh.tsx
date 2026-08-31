@@ -3,20 +3,19 @@ import React from 'react';
 export const BackgroundMesh: React.FC = () => {
   return (
     <>
-      {/* Ambient and directional lights */}
-      <ambientLight intensity={0.85} />
+      <ambientLight intensity={0.9} />
       
-      {/* Key light with warm soft pink */}
-      <directionalLight position={[10, 10, 8]} intensity={1.2} color="#FFFFFF" />
+      {/* Key light with warm clean white */}
+      <directionalLight position={[10, 10, 8]} intensity={1.3} color="#FFFFFF" />
       
-      {/* Fill light with vibrant pastel pink */}
-      <pointLight position={[-8, 4, 6]} intensity={1.8} color="#FFB3D1" distance={20} />
+      {/* Fill light with rich royal dark pink */}
+      <pointLight position={[-8, 4, 6]} intensity={2.2} color="#BE185D" distance={22} />
       
-      {/* Rim light with futuristic rose glow */}
-      <pointLight position={[6, -8, 4]} intensity={2.0} color="#F472B6" distance={25} />
+      {/* Rim light with royal fuchsia glow */}
+      <pointLight position={[6, -8, 4]} intensity={2.4} color="#DB2777" distance={25} />
 
-      {/* Deep back light for soft iridescent reflections */}
-      <pointLight position={[0, 0, -8]} intensity={1.0} color="#E8D5FF" distance={18} />
+      {/* Deep back light for velvet reflection */}
+      <pointLight position={[0, 0, -8]} intensity={1.2} color="#9D174D" distance={20} />
     </>
   );
 };
