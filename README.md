@@ -129,7 +129,6 @@ If you're interested in collaborating on full-stack systems, multi-agent AI pipe
 - 💼 **LinkedIn**: [linkedin.com/in/afsanakathoon3](https://www.linkedin.com/in/afsanakathoon3/)
 - 🐙 **GitHub**: [@Afsu03](https://github.com/Afsu03)
 - 📧 **Email**: [afsanakathoon3@gmail.com](mailto:afsanakathoon3@gmail.com)
-- 📱 **Phone**: +91 63836 90157
 - 📍 **Location**: Coimbatore, Tamil Nadu, India
 
 ---
